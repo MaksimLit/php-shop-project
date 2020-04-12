@@ -1,54 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>техноStore - интернет магазин техники</title>
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Open+Sans:400,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-</head>
-
-<body>
+<?php
+	$pageTitle = "Страница с товаром";
+	include("./templates/_head.php")
+?>
 
 	<!-- white-plate -->
 	<div class="white-plate">
 		<div class="container-fluid">
 			<!-- header -->
-			<div class="header">
-				<div class="row">
-					<div class="col-md-6">
-						<a href="index.html" class="site-logo">
-							<span>техно</span>Store
-						</a>
-					</div>
-					<div class="col-md-6">
-						<div class="admin-link">
-							<a href="./login.html">
-								<img width="38" src="img/icons/padlock.svg" alt="">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php include("./templates/_header.php"); ?>
 			<!-- // header -->
 			<div class="line-between"></div>
 			<!-- content block -->
 			<div class="row">
 				<!-- Left aside -->
-				<div class="col-md-3">
-					<ul class="nav">
-						<li class="nav__element"><a href="!#" class="nav__link">Телефоны</a></li>
-						<li class="nav__element"><a href="!#" class="nav__link">Планшеты</a></li>
-						<li class="nav__element"><a href="!#" class="nav__link nav__link--active">Ноутбуки</a></li>
-						<li class="nav__element"><a href="!#" class="nav__link">Компьютеры</a></li>
-					</ul>
-				</div>
+				<?php include("./templates/_aside.php"); ?>
 				<!-- // Left aside -->
 				<!-- Center Part -->
 				<div class="col-md-9">
@@ -79,14 +44,4 @@
 	</div>
 	<!-- // white-plate -->
 
-	<div class="copyright">
-		<p>
-			Сделал Юрий Ключевский, на интенсиве от
-			<a href="http://webcademy.ru" target="_blank">WebCademy.ru</a>
-		</p>
-	</div>
-
-	<script src="js/main.js"></script>
-</body>
-
-</html>
+<?php include("./templates/_footer.php") ?>
