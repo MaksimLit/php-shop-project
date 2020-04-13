@@ -1,6 +1,7 @@
 <?php
 	$pageTitle = "Главная страница";
 	include("./templates/_head.php");
+	require("./config.php");
 ?>
 
 	<!-- white-plate -->
@@ -20,7 +21,16 @@
 					<div class="row">
 
 						<?php 
-							for ($i = 1; $i < 7; $i++) {
+							// Описываем запрос к базе данных
+							$sql = "SELECT * FROM products";
+
+							// Выполняем запрос, результат сохраняем в переменну
+							$result = $db->query($sql);
+
+							// Преобразовываем ответ в ассоциативный массив и записываем его в переменную
+							$products = $result->fetchAll(PDO::FETCH_ASSOC);
+
+							foreach ($products as $product) {
 								include("./templates/_product-item.php");
 							}
 						?>
