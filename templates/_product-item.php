@@ -23,7 +23,7 @@
             </h4>
             <div class="card-btn">
                 <div class="card-btn__price">
-                    <?php echo($product["price"]);?> ₽
+                    <?php echo( number_format($product["price"], 0, "", " ")); ?> ₽
                 </div>
                 <div class="card-btn__btn">
                     Купить
